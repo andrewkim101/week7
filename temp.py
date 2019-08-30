@@ -20,14 +20,22 @@ class SeleniumTest(unittest.TestCase):
         cls.driver.get(cls.__website_path)
 
     def test_search_keyword(self):
-        search_field = self.driver.find_element_by_name('q')
-        time.sleep(5)
+        pass
 
     @classmethod
     def tearDownClass(cls):
         # close the browser
         cls.driver.minimize_window()
 
+    def test_webdriver_property(self):
+        print(self.driver.current_url)
+        print(self.driver.current_window_handle)
+        print(self.driver.name)
+        print(self.driver.title)
+        #print(self.driver.page_source)
+        
+
+        
 
 # this line makes the current file executable file, verbosity helps to display more details in execution result
 if __name__ == '__main__':
